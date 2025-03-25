@@ -1,2 +1,0 @@
-# Perumalla-s
-Resume website
