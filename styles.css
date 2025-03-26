@@ -1,6 +1,6 @@
-/* styles.css */
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f7f7f7;
@@ -10,14 +10,11 @@ header {
     background-color: #232f3e;
     color: white;
     padding: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    text-align: left;
 }
-
-header h1 {
-    margin: 0;
-    padding-left: 20px;
+.welcom {
+    text-align: center;
+    padding: 20px;
 }
 
 nav ul {
@@ -25,21 +22,75 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    justify-content: right;
+    gap: 20px;
 }
 
 nav ul li {
-    margin: 0 15px;
+    display: inline;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 18px;
 }
 
-.home {
-    text-align: center;
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Sections Container */
+.sections-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
     padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.box {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+#about {
+    background-color: #f4c2c2;
+}
+
+#contact {
+    background-color: #dfe7f3;
+}
+
+#services {
+    background-color: #c4e9db;
+}
+
+#projects {
+    background-color: #f1d9ca;
 }
 
 footer {
@@ -66,6 +117,16 @@ footer {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .sections-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .column {
+        width: 80%;
+    }
+}
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -84,4 +145,26 @@ footer {
     nav ul li {
         margin: 10px 0;
     }
+    
+    .sections-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .column {
+        width: 90%;
+    }
+    
+    .box {
+        width: 100%;
+        height: auto;
+        padding: 30px;
+    }
+}
+
+.box-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
 }
